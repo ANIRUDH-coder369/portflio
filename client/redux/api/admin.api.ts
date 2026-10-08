@@ -4,7 +4,12 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const adminAPi = createApi({
     reducerPath: 'adminAPi',
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000/api/admin", credentials: 'include'
+        baseUrl: process.env.NEXT_PUBLIC_BACKEND_URL
+            ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/admin`
+            : (process.env.NODE_ENV === 'production'
+                ? "https://portflio-ten-beta.vercel.app/api/admin"
+                : "http://localhost:5000/api/admin"),
+        credentials: 'include'
     }),
     endpoints: (builder) => {
         return {

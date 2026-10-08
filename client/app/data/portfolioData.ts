@@ -123,5 +123,27 @@ export const portfolioData = {
       githubUrl: "https://github.com/17komalkshirsagar",
       featured: true,
     },
+    {
+      id: "2",
+      title: "💻 Developer Portfolio & API",
+      description:
+        "Modern developer portfolio website with interactive UI, Next.js frontend, and Node.js/Express backend API.",
+      image:
+        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80",
+      category: "web",
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
+      liveUrl: "https://portflio-6pt8.vercel.app",
+      githubUrl: "https://github.com/ANIRUDH-coder369/portflio",
+      featured: true,
+    },
   ] as Project[],
 };
